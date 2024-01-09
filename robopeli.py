@@ -6,12 +6,11 @@ class Robottipeli:
         pygame.init()
         self.hirvio=pygame.image.load("monster.png")
         self.kolikko=pygame.image.load("coin.png")
-        self.robo=pygame.image.load("robot.png")
+        self.robo=pygame.image.load("robo.jpg")
         self.fontti = pygame.font.SysFont("Arial", 24)
         self.x=0
         self.y=480-self.robo.get_height()
-        #self.naytto=pygame.display.set_mode((640, 480))
-        self.naytto=pygame.display.set_mode((1000, 700))
+        self.naytto=pygame.display.set_mode((640, 480))
         self.naytto.fill((102, 0, 102))
         pygame.display.set_caption("Robottipeli")
         self.kello = pygame.time.Clock()
@@ -39,10 +38,10 @@ class Robottipeli:
             self.kello.tick(400)
             
     def luo_raha(self):
-        self.rahat.append([random.randint(self.kolikko.get_width(),1000-self.kolikko.get_width()),-self.kolikko.get_height(),random.randint(1,2)*2])
+        self.rahat.append([random.randint(self.kolikko.get_width(),640-self.kolikko.get_width()),-self.kolikko.get_height(),random.randint(1,2)*2])
 
     def luo_vihu(self):
-        self.vihut.append([random.randint(self.hirvio.get_width(),1000-self.hirvio.get_width()),-self.hirvio.get_height(),random.randint(0,2)*2+1])
+        self.vihut.append([random.randint(self.hirvio.get_width(),640-self.hirvio.get_width()),-self.hirvio.get_height(),random.randint(0,2)*2+1])
             
     def liikuta_rahoja(self):
         for raha in self.rahat:
