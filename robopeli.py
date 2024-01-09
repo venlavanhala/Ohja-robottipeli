@@ -6,7 +6,7 @@ class Robottipeli:
         pygame.init()
         self.hirvio=pygame.image.load("morko.png")
         self.kolikko=pygame.image.load("coin.png")
-        self.robo=pygame.image.load("robot.png")
+        self.robo=pygame.image.load("robo.png")
         self.fontti = pygame.font.SysFont("Arial", 24)
         self.x=0
         self.y=480-self.robo.get_height()
@@ -89,7 +89,7 @@ class Robottipeli:
 
     def piirra_naytto(self):
         self.naytto.fill((102, 0, 102))
-        self.naytto.blit(self.robo, (self.x, 200))
+        self.naytto.blit(self.robo, (self.x, 340))
         teksti=self.fontti.render(f"Pisteesi: {self.pisteet}",True,(10,0,10))
         self.naytto.blit(teksti, (80,60))
         if self.oikealle:
