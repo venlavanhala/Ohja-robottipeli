@@ -4,9 +4,9 @@ import random
 class Robottipeli:
     def __init__(self):
         pygame.init()
-        self.hirvio=pygame.image.load("monster.png")
+        self.hirvio=pygame.image.load("morko.png")
         self.kolikko=pygame.image.load("coin.png")
-        self.robo=pygame.image.load("robo.jpg")
+        self.robo=pygame.image.load("robot.png")
         self.fontti = pygame.font.SysFont("Arial", 24)
         self.x=0
         self.y=480-self.robo.get_height()
